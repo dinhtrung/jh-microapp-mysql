@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "app",
+    "packageName": "com.ft",
+    "packageFolder": "com/ft",
+    "serverPort": 8081,
+    "serviceDiscoveryType": "eureka",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": false,
+    "enableSwaggerCodegen": "true",
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "vi",
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.5.0",
+    "jwtSecretKey": "Yjc3YzY5MGNiZDU0OWZiNGI0OWQyNmU2M2FiN2Y1Y2VjYjJhM2IwMjYzZWFiMDZiMDQzOGY0MDJiZjdkOWY5ZjRiNmJlYjY3ZTMzMDk4NTQwNTYzNWQ2ZDYwNzU5MmRiYTExZTMzNTQyMjJmY2NkYjgzY2VkYWU3MjA2OThjZGM=",
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "dinhtrung",
+  "repository-name": "jh-microapp-mysql"
+}
