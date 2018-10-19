@@ -1,0 +1,61 @@
+{
+    "name": "SmppRoutingInfo",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "shortcode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "keywords",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "smppProfiles",
+            "otherEntityName": "smppProfile",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "httpProfiles",
+            "otherEntityName": "httpProfile",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20181018094228",
+    "entityTableName": "smpp_routing_info",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "app",
+    "applications": "*",
+    "microserviceName": "app"
+}

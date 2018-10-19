@@ -1,0 +1,33 @@
+entity SmppProfile {
+	name String required,
+    description TextBlob,
+    configuration TextBlob
+}
+
+entity SmppRoutingInfo {
+	name String required,
+    description TextBlob,
+    shortcode String required maxlength(20),
+    keywords String,
+    status Boolean required,
+}
+
+entity HttpProfile {
+	name String required,
+    description TextBlob,
+    configuration TextBlob,
+    endpoint String required,
+}
+
+relationship OneToMany {
+	SmppProfile{routes} to SmppRoutingInfo{smppProfiles(name)},
+    HttpProfile{routes} to SmppRoutingInfo{httpProfiles(name)},
+}
+dto all with mapstruct
+service all with serviceClass
+paginate all with pager
+
+
+
+
+

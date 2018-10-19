@@ -1,0 +1,40 @@
+{
+    "name": "SmppProfile",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "configuration",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "routes",
+            "otherEntityName": "smppRoutingInfo",
+            "otherEntityRelationshipName": "smppProfiles"
+        }
+    ],
+    "changelogDate": "20181018094227",
+    "entityTableName": "smpp_profile",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "app",
+    "applications": "*",
+    "microserviceName": "app"
+}
