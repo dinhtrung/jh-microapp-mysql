@@ -1,0 +1,62 @@
+{
+    "name": "Message",
+    "fields": [
+        {
+            "fieldName": "source",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "destination",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "text",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "tags",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "requestAt",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "responseAt",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "deliveredAt",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": -9,
+            "fieldValidateRulesMax": 9
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "route",
+            "otherEntityName": "smppRoutingInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181019103055",
+    "entityTableName": "message",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "app",
+    "applications": "*",
+    "microserviceName": "app"
+}

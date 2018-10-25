@@ -8,7 +8,9 @@
     <include file="config/liquibase/changelog/20181018094227_added_entity_SmppProfile.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181018094228_added_entity_SmppRoutingInfo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20181018094229_added_entity_HttpProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181019103055_added_entity_Message.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20181018094228_added_entity_constraints_SmppRoutingInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181019103055_added_entity_constraints_Message.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

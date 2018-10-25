@@ -23,6 +23,22 @@ relationship OneToMany {
 	SmppProfile{routes} to SmppRoutingInfo{smppProfiles(name)},
     HttpProfile{routes} to SmppRoutingInfo{httpProfiles(name)},
 }
+
+entity Message {
+	source String,
+    destination String,
+    text TextBlob,
+    tags String,
+    requestAt ZonedDateTime,
+    responseAt ZonedDateTime,
+    deliveredAt ZonedDateTime,
+    state Integer min(-9) max(9)
+}
+
+relationship ManyToOne {
+	Message{route} to SmppRoutingInfo
+}
+
 dto all with mapstruct
 service all with serviceClass
 paginate all with pager
